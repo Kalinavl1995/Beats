@@ -1,0 +1,21 @@
+.player-section {
+    background-color: #F8FAF9;
+
+    &__container {
+        width: 662px;
+        height: 392px;
+        position: relative;
+        margin: 0 auto;
+
+        @include tablets {
+            width: 100%;
+            height: 352px;
+        }
+
+        @include phones {
+            width: 100%;
+            height: 234px;
+        }
+    }
+
+}

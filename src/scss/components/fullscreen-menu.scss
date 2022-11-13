@@ -1,0 +1,43 @@
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  background: #2e3336;
+  z-index: 1000;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 100;
+
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 5px;
+        background: gray;
+        border-radius: 4px;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+  }
+}

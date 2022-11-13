@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: rem(21px) rem(41px);
+    min-width: rem(163px);
+    line-height: 1;
+    color: #fff;
+    background: #E01F3D;
+    border-radius: rem(100px);
+    transition: .4s;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background: #CA1B36;
+        transition: .4s;
+    }
+
+    &--bg--none {
+        background-color: transparent;
+        min-width: rem(70px);
+        padding: rem(21px) rem(10px);
+        font-weight: 400;
+
+        &:hover {
+            color: $colorRed;
+            transition: .4s;
+            background-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.block-reviews {
+    display: flex;
+    background: #F8FAF9;
+    min-height: rem(348px);
+    padding: rem(42px);
+    position: relative;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .3s;
+
+    &::before {
+        content: "";
+        display: block;
+        width: rem(84px);
+        height: rem(42px);
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        background: mistyrose;
+        background: $colorWhite;
+        position: absolute;
+        left: calc(50% - 42px);
+        top: rem(-20px);
+
+        @include phones {
+            display: none;
+        }
+    }
+
+    &--active {
+        position: static;
+        opacity: 1;
+    }
+
+    &__photo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+        width: rem(253px);
+        height: rem(264px);
+    }
+
+    &__text {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin-left: rem(40px);
+    }
+
+    &__title {
+        @include fontsStyle(headline3);
+        margin-top: rem(30px);
+        margin-bottom: rem(27px);
+    }
+
+    &__comment {
+        @include fontsStyle;
+        color: $colorGray;
+        margin-bottom: rem(50px);
+        max-width: 83%;
+    }
+
+    &__author {
+        @include fontsStyle(palyBold2);
+    }
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+
+        &__text {
+            align-items: center;
+            text-align: center;
+            margin-left: 0;
+        }
+
+        &__photo {
+            margin-bottom: rem(20px);
+        }
+
+        &__img {
+            width: rem(130px);
+            height: rem(130px);
+        }
+
+        &__title {
+            margin-bottom: rem(12px);
+            margin-top: 0;
+        }
+
+        &__comment {
+            margin-bottom: rem(12px);
+            min-width: 100%;
+        }
+
+    }
+
+    @include phones {
+
+        &__photo {
+            margin-bottom: rem(20px);
+        }
+
+        &__title {
+            margin-bottom: rem(12px);
+            margin-top: 0;
+        }
+
+        &__comment {
+            margin-bottom: rem(12px);
+            min-width: 100%;
+        }
+    }
+}
+

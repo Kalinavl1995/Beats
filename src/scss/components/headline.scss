@@ -1,0 +1,31 @@
+.headline {
+
+    &__title {
+        margin-bottom: rem(25px);
+    }
+
+    &__desc {
+        @include fontsStyle;
+        display: flex;
+        color: $colorGray;
+        max-width: rem(590px);
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: rem(60px);
+
+        @include tablets {
+            max-width: 75%;
+        }
+
+        @include phones {
+            max-width: 100%;
+        }
+    }
+
+}
+
+@include phones {
+    .headline__title.section__title {
+        margin-bottom: rem(11px);
+    }
+}

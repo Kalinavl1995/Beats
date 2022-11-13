@@ -1,0 +1,70 @@
+.accordion-horizontal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+
+    &__item {
+        display: flex;
+    }
+
+    &__title {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-family: 'Alegreya Sans';
+        font-size: rem(36px);
+        font-weight: 600;
+        color: $colorWhite;
+        background: #999;
+        width: rem(100px);
+        padding-top: rem(40px);
+        cursor: pointer;
+
+        &--bg--color--red{
+            background-color: $colorRed;
+
+        }
+
+        &--bg--color--black{
+            background-color: $colorBlack;
+
+        }
+
+        @include phones {
+            width: rem(80px);
+        }
+
+    }
+
+    &__container {
+        width: 0;
+        overflow: hidden;
+        height: 100%;
+        transition: width .3s;
+    }
+
+    &__content {
+        padding: rem(50px) rem(50px);
+        width: rem(524px);
+        background-color: rgba(51, 53, 55, 0.9);
+        height: 100%;
+
+        @include phones {
+            padding: rem(30px) rem(30px);
+        }
+    }
+
+    &__text {
+        display: block;
+        font-family: 'Alegreya Sans';
+        font-size: rem(16px);
+        font-weight: 400;
+        text-align: left;
+        color: $colorWhite;
+
+    }
+  }

@@ -1,0 +1,43 @@
+/* fonts */
+@mixin fontsStyle($fonts: playRegularBody2) {
+    font-family: 'Play';
+    font-size: rem(16px);
+    font-weight: 400;
+    line-height: 1em;
+    color: #303236;
+
+    @if $fonts == playSemiBold2 {
+        font-size: rem(18px);
+        font-weight: 600;
+        line-height: 1.33em;
+    }
+
+    @if $fonts == palyBold2{
+        font-size: rem(18px);
+        font-weight: 700;
+        line-height: 1.12em;
+    }
+
+    @if $fonts == headline1 {
+        font-size: rem(48px);
+        font-weight: 700;
+        line-height: 1.08em;
+        text-transform: uppercase;
+    }
+
+    @if $fonts == headline2 {
+        font-size: rem(36px);
+        font-weight: 700;
+        line-height: 1.16em;
+        text-transform: uppercase;
+    }
+
+    @if $fonts == headline3 {
+        font-size: rem(24px);
+        font-weight: 700;
+        line-height: 1.5em;
+        text-transform: uppercase;
+    }
+
+}
+

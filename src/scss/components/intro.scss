@@ -1,0 +1,99 @@
+.intro {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
+        padding-bottom: 7%;
+        background: url('../img/intro.png') right center /50% auto no-repeat;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 44%;
+        margin-bottom: rem(65px);
+        position: relative;
+        z-index: 10;
+
+    }
+
+    &__title {
+        @include fontsStyle(headline1);
+        margin-bottom: rem(23px);
+
+        @include phones {
+            font-size: rem(32px);
+        }
+    }
+
+    &__desc {
+        font-family: 'Alegreya Sans';
+        font-size: rem(21px);
+        font-weight: 400;
+        line-height: 1.3em;
+        color: $colorBlack;
+        margin-bottom: rem(40px);
+        max-width: 80%;
+    }
+
+    @include tablets {
+        &__container {
+            background: none;
+            margin-bottom: 20%;
+
+        }
+        &__content {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            margin-bottom: 0;
+
+            &::before {
+                content: "";
+                display: block;
+                width: rem(316px);
+                height: rem(330px);
+                background: url("../img/intro.png") center center / contain no-repeat;
+                margin-bottom: rem(16px);
+            }
+
+        }
+
+        &__title {
+            width: 100%;
+        }
+
+        &__desc {
+            max-width:64%;
+        }
+
+        &__icon-features {
+            display: none;
+        }
+    }
+
+    @include phones {
+        &__content {
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        &__content::before {
+            margin-bottom: rem(48px);
+        }
+
+        &__title {
+            margin-bottom: rem(20px);
+        }
+
+        &__desc {
+            font-size: rem(18px);
+            margin-bottom: rem(20px);
+        }
+    }
+
+}

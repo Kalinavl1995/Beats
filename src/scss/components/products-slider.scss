@@ -1,0 +1,65 @@
+.products-slider {
+    position: relative;
+
+    .bx-wrapper{
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .bx-viewport {
+        height: 100%;
+    }
+
+    &__arrows {
+        z-index: 10;
+    }
+
+    &__arrow-left {
+        position: absolute;
+        top: 50%;
+        left: -5%;
+        width: rem(20px);
+        height: rem(20px);
+        border: 2px solid #000;
+        border-top-left-radius: 3px;
+        border-bottom: transparent;
+        border-right: transparent;
+        transform: translateY(-50%) rotate(-45deg);
+        cursor: pointer;
+
+        @include tablets {
+            top: 24%;
+            left: -5%;
+        }
+
+        @include phones {
+            top: 24%;
+            left: -10%;
+        }
+    }
+
+    &__arrow-right {
+        position: absolute;
+        top: 50%;
+        right: -5%;
+        width: rem(20px);
+        height: rem(20px);
+        border: 2px solid #000;
+        border-top-left-radius: 3px;
+        border-bottom: transparent;
+        border-right: transparent;
+        transform: translateY(-50%) rotate(135deg);
+        cursor: pointer;
+
+        @include tablets {
+            top: 24%;
+            right: -5%;
+        }
+
+        @include phones {
+            top: 24%;
+            right: -10%;
+        }
+    }
+  }

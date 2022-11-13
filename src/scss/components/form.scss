@@ -1,0 +1,216 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        &:not(:last-child) {
+            margin-right: rem(20px);
+        }
+
+        @include tablets {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__row:not(:last-child) {
+        margin-bottom: rem(15px);
+    }
+
+    &__input-group {
+        width: 100%;
+        height: 100%;
+
+        &:not(:last-child) {
+            margin-right: rem(14px);
+        }
+    }
+
+    &__label {
+        @include fontsStyle;
+        color: $colorWhite;
+    }
+
+    &__input {
+        border-radius: rem(4px);
+        padding: rem(18px) rem(12px) rem(20px) rem(12px);
+        font-family: 'Open Sans';
+        font-size: rem(14px);
+        line-height: 1.42em;
+        border: none;
+        color: #000;
+        outline: none;
+        width: 100%;
+        margin-top: rem(6px);
+
+        &--error-modal {
+            border: $colorRed solid;
+        }
+
+        &:focus {
+            outline: $colorRed solid rem(3px);
+        }
+    }
+
+    &__input--textarea {
+        width: 100%;
+        height: rem(152px);
+        resize: none;
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        margin-top: rem(20px);
+    }
+
+    &__controls-list {
+        display: flex;
+        margin-bottom: rem(15px);
+    }
+
+    &__controls-group{
+        display: flex;
+        align-items: center;
+    }
+
+    &__controls-item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__controls-item ~ &__controls-item {
+        margin-left: rem(24px);
+    }
+
+    &__controls-item-radio {
+        display: block;
+        width: rem(25px);
+        height: rem(25px);
+        border-radius: 50%;
+        background: $colorWhite;
+        cursor: pointer;
+    }
+
+    &__radio {
+        display: none;
+
+        &:checked ~ .form__controls-item-radio {
+            background: $colorRed;
+            border: rem(5px) solid $colorWhite;
+        }
+    }
+
+    &__controls-text {
+        @include fontsStyle;
+        color: $colorWhite;
+        margin-left: rem(10px);
+
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked ~ .form__controls-item-checkbox::after {
+            display: block;
+        }
+
+        &:checked ~ .form__controls-item-checkbox::before {
+            display: block;
+        }
+    }
+
+    &__controls-item-checkbox {
+        display: block;
+        height: rem(24px);
+        width: rem(24px);
+        border-radius: rem(4px);
+        background: $colorWhite;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            display: none;
+            position: absolute;
+            left: rem(8px);
+            top: rem(9px);
+            width: rem(4px);
+            height: rem(7px);
+            background: $colorRed;
+            transform: rotate(-45deg);
+            border-radius: rem(200px) rem(200px) rem(200px) rem(200px);
+        }
+
+        &::after{
+            content: "";
+            display: none;
+            position: absolute;
+            left: rem(12px);
+            top: rem(6px);
+            width: rem(4px);
+            height: rem(11px);
+            background: $colorRed;
+            transform: rotate(45deg);
+            border-radius: rem(200px) rem(200px) rem(200px) rem(200px);
+        }
+    }
+
+    &__btns {
+        display: flex;
+    }
+
+    &__btn {
+        margin-left: rem(10px);
+    }
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__col {
+            width: 100%;
+        }
+
+        &__col:not(:last-child) {
+            margin-bottom: rem(15px);
+        }
+
+        &__input--textarea {
+            height: rem(80px);
+        }
+
+        &__controls-list {
+            margin-bottom: rem(30px);
+        }
+
+        &__btns {
+            justify-content: center;
+        }
+    }
+
+    @include phones {
+
+        &__input--textarea {
+            height: rem(82px);
+        }
+
+        &__controls {
+            margin: 0 0 rem(20px);
+        }
+
+        &__controls-list {
+            justify-content: center;
+        }
+    }
+}

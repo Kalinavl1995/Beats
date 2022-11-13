@@ -1,0 +1,28 @@
+.contacts {
+    display: flex;
+    @include fontsStyle(playRegularBody2);
+    color: $colorBlack;
+
+    &__phone {
+        transition: .3s;
+
+        &::before {
+            content: url('../img/phone-icon.svg');
+            margin-right: 0.379em;
+        }
+    }
+
+    &__phone:hover {
+        color: #CA1B36;
+        transition: .3s;
+    }
+}
+
+.contacts.header__contacts {
+    @include tablets {
+        display: none;
+    }
+}
+
+
+

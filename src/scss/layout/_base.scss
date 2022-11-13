@@ -1,0 +1,118 @@
+html {
+  font-size: 18px;
+
+  @include tablets {
+    font-size: 17px;
+  }
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include fontsStyle();
+  color: $colorGray;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  border: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 80%;
+  // padding: 0 80px;
+  position: relative;
+}
+
+@include tablets {
+  .container {
+    padding: 0 rem(40px);
+  }
+
+}
+
+@include phones {
+  .container {
+    padding: 0 rem(15px);
+  }
+}
+
+
+
+

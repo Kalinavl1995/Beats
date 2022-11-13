@@ -1,0 +1,47 @@
+.menu {
+    font-family: 'Alegreya Sans';
+    font-size: rem(18px);
+    font-weight: 400;
+    line-height: 1.66em;
+    color: #292929;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__item {
+        transition: .3s;
+    }
+
+    &__item:hover {
+        color: #CA1B36;
+        transition: .3s;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 1.68em;
+    }
+
+    @include tablets {
+        display: none;
+
+        &__list{
+            flex-direction: column;
+        }
+
+        &--vertical {
+            @include fontsStyle(headline2);
+            font-weight: 400;
+            color: $colorWhite;
+            z-index: 110;
+            display: flex;
+
+            .menu__item {
+                margin-right: 0;
+            margin-bottom: rem(30px);
+            }
+        }
+    }
+}

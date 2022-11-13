@@ -1,0 +1,12 @@
+.logo {
+    text-align: center;
+    flex-shrink: 0;
+    width: rem(40px);
+    height: rem(40px);
+
+    &__icon {
+        height: 100%;
+        width: 100%;
+        fill: $colorRed;
+    }
+}

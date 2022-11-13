@@ -1,0 +1,45 @@
+.footer {
+    height: rem(86px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $colorWhite;
+
+      &__container {
+         height: 100%;
+      }
+
+      &__inner {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         height: 100%;
+      }
+
+      &__contacts {
+         display: flex;
+         flex-direction: column;
+      }
+
+      &__address {
+         margin-bottom: rem(6px);
+      }
+
+      @include phones {
+         min-height: rem(152px);
+
+         &__inner {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+         }
+
+         &__contacts {
+            margin-bottom: rem(14px);
+         }
+
+         &__address {
+            margin-bottom: rem(14px);
+         }
+      }
+}
